@@ -3,9 +3,8 @@
 #include <cmath>
 #include "typedefs.hpp"
 
-sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chowka Bhaara");
 extern uint8_t Current_Play_number;
-
+sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chowka Bhaara");
 
 void moveCoinPosition(sf::CircleShape shape, sf::RenderWindow* renderWindow, int row_value, int column_value, int draw_position, int solo_coin_flag, int coin_blink_flag)
 {
@@ -89,13 +88,12 @@ void BoardGraphics(Player User[], int NPlayers)
 	// Input: Player objects and number of players
 	// Output: Display/Draw the main board
 	// Purpose: To display visual aspects of Chowka Bhaara
-	sf::RenderWindow renderWindow(sf::VideoMode(800, 800), "Chowka Bhaara");
 	renderWindow.setFramerateLimit(60);
 
 	sf::RectangleShape player(sf::Vector2f(100.0f, 100.0f));
 	player.setPosition(650.0f, 250.0f);
 	sf::Texture playerTexture;
-	playerTexture.loadFromFile("DiceSheet3D.png");
+	playerTexture.loadFromFile("../Media/DiceSheet3D.png");
 	player.setTexture(&playerTexture);
 
 	sf::Vector2u textureSize = playerTexture.getSize();
